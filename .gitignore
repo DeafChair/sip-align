@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.fits
+output/
+sip_calibrate_output/
+align_output/
+test_output/
