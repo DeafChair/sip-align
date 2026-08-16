@@ -22,9 +22,12 @@ import numpy as np
 from astropy.io import fits
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+from project_paths import ensure_on_sys_path  # noqa: E402
+
 MHP_ROOT = ROOT / "MHP"
-if str(MHP_ROOT) not in sys.path:
-    sys.path.insert(0, str(MHP_ROOT))
+ensure_on_sys_path(MHP_ROOT)
 
 from m31_hmtproject.align import align_ref_to_new  # noqa: E402
 
